@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>헬스장 출입체크</title>
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #467b9c, #7789a7);
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        /* Container Styling */
+        .login-container {
+            background-color: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 30px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            width: 400px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .login-container:hover {
+            transform: scale(1.02);
+        }
+
+        /* Header Styling */
+        .login-container h2 {
+            margin-bottom: 20px;
+            color: #f4f4f9;
+            font-size: 24px;
+        }
+
+        /* Label Styling */
+        .login-container label {
+            display: block;
+            text-align: left;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: #dddddd;
+        }
+
+        /* Input Styling */
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 85%;
+            padding: 12px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+        }
+
+        .login-container input::placeholder {
+            color: #e0e0e0;
+        }
+
+        /* Button Styling */
+        .login-container button {
+            background: linear-gradient(135deg, #9eb356, #feb47b);
+            color: #ffffff;
+            border: none;
+            padding: 12px;
+            width: 100%;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .login-container button:hover {
+            background: linear-gradient(135deg, #feb47b, #ff7e5f);
+            box-shadow: 0 6px 15px rgba(255, 126, 95, 0.5);
+        }
+
+        /* Link Styling */
+        .login-container p {
+            margin-top: 15px;
+            font-size: 13px;
+            color: #f4f4f9;
+        }
+
+        .login-container a {
+            color: #ffd700;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .login-container a:hover {
+            color: #ffcc00;
+        }
+
+        /* Animation on Focus */
+        .login-container input:focus {
+            outline: none;
+            background-color: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>헬스장 출입체크</h2>
+        <form action="/login" method="POST">
+            <label for="username">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;아이디</label>
+            <input type="text" id="username" name="username" placeholder="아이디를 입력하세요" required>
+
+            <label for="password">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;비밀번호</label>
+            <input type="password" id="password" name="password" placeholder="비밀번호를 입력하세요" required>
+
+            <button type="submit">로그인</button>
+        </form>
+        <p>아이디가 없으신가요? <a href="#">회원가입</a></p>
+    </div>
+</body>
+</html>
+
+
+
